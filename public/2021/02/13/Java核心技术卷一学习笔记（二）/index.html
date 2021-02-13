@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>My First Hexo Blog | qcsg的博客</title>
+  <title>Java核心技术卷一学习笔记（二） | qcsg的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My First Hexo Blog">
-<meta property="og:url" content="http://example.com/2021/02/07/My-First-Hexo-Blog/index.html">
+  <meta name="description" content="对象与类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java核心技术卷一学习笔记（二）">
+<meta property="og:url" content="http://example.com/2021/02/13/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7%E4%B8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="qcsg的博客">
+<meta property="og:description" content="对象与类">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-07T11:26:52.000Z">
-<meta property="article:modified_time" content="2021-02-07T11:26:52.660Z">
+<meta property="article:published_time" content="2021-02-13T05:38:06.000Z">
+<meta property="article:modified_time" content="2021-02-13T10:44:02.049Z">
 <meta property="article:author" content="黄俊淇">
+<meta property="article:tag" content="Java学习">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="qcsg的博客" type="application/atom+xml">
@@ -45,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/IMG_1641.JPG" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">黄俊淇</a></h1>
@@ -95,7 +98,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/IMG_1641.JPG" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">黄俊淇</h1>
@@ -134,27 +137,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-My-First-Hexo-Blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java核心技术卷一学习笔记（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      My First Hexo Blog
+      Java核心技术卷一学习笔记（二）
     </h1>
   
 
         
-        <a href="/2021/02/07/My-First-Hexo-Blog/" class="archive-article-date">
-  	<time datetime="2021-02-07T11:26:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-07</time>
+        <a href="/2021/02/13/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7%E4%B8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-02-13T05:38:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="对象与类"><a href="#对象与类" class="headerlink" title="对象与类"></a>对象与类</h1><a id="more"></a>
+
+<h2 id="1-面向对象程序设计概述"><a href="#1-面向对象程序设计概述" class="headerlink" title="1 面向对象程序设计概述"></a>1 面向对象程序设计概述</h2><ul>
+<li><p>在Java中，所有的类都扩展自Object类</p>
+</li>
+<li><p>在类之间有三种常见的关系</p>
+<ul>
+<li><p>依赖（uses-a）：如果一个类的方法使用或操纵另一个类的对象，就说一个类依赖于另一个类</p>
+</li>
+<li><p>聚合（has-a）：一个类包含着另一个类的对象</p>
+</li>
+<li><p>继承（is-a）</p>
+</li>
+</ul>
+</li>
+<li><p>对象变量并没有实际包含一个对象，它只是引用一个对象。在Java中，任何对象变量的值都是对储存在另外一个地方的某个对象的引用。区别于C++的引用，Java的对象变量更类似与C++的对象指针，且两者初始化语法类似。</p>
+<p>  C++：Date* birthday = new Date();</p>
+<p>  Java: Date birthday = new Date();</p>
+</li>
+</ul>
+<h2 id="2-使用预定义类及用户自定义类"><a href="#2-使用预定义类及用户自定义类" class="headerlink" title="2 使用预定义类及用户自定义类"></a>2 使用预定义类及用户自定义类</h2><ul>
+<li><p>尽量不要用public标记实例字段，这会破坏封装性</p>
+</li>
+<li><p>Java构造器工作方式与C++一样，但是所有Java对象都是在堆中构造，构造器总是结合new操作符一起使用，不可像C++一样忘记new操作符：A a(5);//C++,not java</p>
+</li>
+<li><p>在所有方法中都不要使用与实例字段同名的变量</p>
+</li>
+<li><p>同样可以使用var关键字声明对象，但只能用于方法中的局部变量。参数和字段的类型必须声明。</p>
+</li>
+<li><p>在C++中，通常在类的外面定义方法，在类体内定义方法会自动内联。但是，在Java中，所有方法都必须在类的内部定义，但并不表示它们是内联方法。是否将某个方法设置为内联方法是Java虚拟机的任务。即时编译器会监视那些简短、经常调用而且没有被覆盖的方法调用，并进行优化。</p>
+</li>
+<li><p>方法可以访问所属类任何对象的私有特性，不仅限于隐式参数。</p>
+</li>
+<li><p>可以将实例字段定义为final，这样的字段必须在构造对象时初始化。但对于可变的类，使用final修饰符会造成混乱。例如：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private final StringBuilder evaluations;</span><br></pre></td></tr></table></figure>
+<p>final关键字只是表示存储在evaluations变量中的对象引用不会再指示另外一个不同的StringBuilder对象。不过这个对象本身可以更改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evaluations.append(LocalDate.now()+&quot;:Gold star!\n&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="3-静态字段与静态方法"><a href="#3-静态字段与静态方法" class="headerlink" title="3 静态字段与静态方法"></a>3 静态字段与静态方法</h2><ul>
+<li><p>static修饰的字段，每个类只有一个这样的字段，与C++类似。</p>
+</li>
+<li><p>静态方法是不在对象上执行的方法，可以认为静态方法是没有this参数的方法，但是，静态方法可以访问静态字段。</p>
+</li>
+<li><p>在下面两种情况下可以使用静态方法：</p>
+<ul>
+<li><p>方法不需要访问对象状态，因为它需要的所有参数都通过显示参数提供</p>
+</li>
+<li><p>方法只需要访问类的静态字段</p>
+</li>
+</ul>
+</li>
+<li><p>静态方法还有另一种常见的用途。类似NumberFormat的类使用静态工厂方法来构造对象。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat currencyFormatter &#x3D; NumberFormat.getCurrencyInstance();</span><br><span class="line">NumberFormat percentFormatter &#x3D; NumberFormat.getPercentInstance();</span><br><span class="line">double x &#x3D; 0.1;</span><br><span class="line">System.out.println(currencyFormatter.format(x));&#x2F;&#x2F;$0.10</span><br><span class="line">System.out.println(percentFormatter.format(x));&#x2F;&#x2F;10%</span><br></pre></td></tr></table></figure>
+<p>为什么要使用静态工厂方法？</p>
+<ol>
+<li><p>无法命名构造器。构造器的名字必须与类名相同。但是这里希望有两个不同的名字，分别得到货币实例和百分比实例。</p>
+</li>
+<li><p>使用构造器时，无法改变所构造对象的类型。而工厂方法实际上将返回DecimalFormat类的对象。</p>
+</li>
+</ol>
+<h2 id="4-方法参数"><a href="#4-方法参数" class="headerlink" title="4 方法参数"></a>4 方法参数</h2><ul>
+<li>Java总是采用按值调用。方法不能修改传递给它的任何参数变量的内容。</li>
+</ul>
+
       
 
       
@@ -183,6 +252,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -233,7 +313,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/07/My-First-Hexo-Blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/13/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7%E4%B8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -245,6 +325,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/02/13/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E9%9D%9E%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          二叉树的遍历非递归算法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/08/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7%E4%B8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java核心技术卷一学习笔记（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -290,13 +389,6 @@
     </div>
   </div>
   <!-- 《网站备案号 -->
- 
-    <div class="BeiAn-info">
-        <img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png" title="备案管理系统">
-        <a href="http://www.beian.miit.gov.cn/" style="color:#f72b07" target="_blank" title="备案号">
-            粤ICP备00000000号
-        </a>
-    </div>
  
 <!-- 网站备案号》 -->
 
@@ -375,6 +467,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -456,7 +556,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">黄俊淇的博客空间</div>
   	  	
     	</section>
     
